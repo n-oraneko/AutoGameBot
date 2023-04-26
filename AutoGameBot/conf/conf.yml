@@ -1,0 +1,66 @@
+##############################################
+#設定ファイル 23.4.26 by oraneko	
+##############################################
+# capture borard setting
+capture:
+ capture_borad: 0
+ #画質設定　例）2 ：上下ともに1/2になる
+ capture_image_quality: 2
+ #間引き処理
+ waste_frame_num: 5
+ training_frame_num: 10
+
+# usb setting
+baudrate: 115200
+serial_port: COM6
+
+# collect_dataset parameter
+stick_thresholed:
+ l_stick: 0.5
+ r_stick: 0.5
+
+button_threshold:
+ 'Y' : 0.5
+ 'B' : 0.5
+ 'A' : 0.5
+ 'X' : 0.5
+ 'L' : 0.5
+ 'R' : 0.5
+ 'ZL' : 0.5
+ 'ZR' : 0.5
+ 'MINUS': 0.5
+ 'PLUS': 0.5
+ 'LCLICK': 0.5
+ 'RCLICK': 0.5
+ 'HOME': 0.5
+ 'CAPTURE': 0.5
+ 'UP': 0.5
+ 'RIGHT': 0.5
+ 'DOWN': 0.5
+ 'LEFT': 0.5
+stick_bias: 2
+
+mapping:
+ control:
+  'Y' : 'Y'
+  'B' : 'R' 
+  'A' : 'A' 
+  'X' : 'X'
+  'L' : 'ZL' 
+  'R' : 'ZR' 
+  'ZL' : 'L' 
+  #'ZR' : 'ZR' 
+  #'MINUS': 'MINUS' 
+  #'PLUS': 'PLUS'  
+  #'LCLICK': 'LCLICK' 
+  'RCLICK': 'RCLICK' 
+  #'HOME': 'HOME'  
+  #'CAPTURE': 'CAPTURE'  
+  #'UP': 'UP' 
+  #'RIGHT': 'RIGHT'  
+  #'DOWN': 'DOWN'  
+  #'LEFT': 'LEFT'
+
+ stick:
+  l_stick: true
+  r_stick: true
