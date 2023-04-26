@@ -31,7 +31,7 @@ class analyze_frame(object):
                         get_data["press_button"].append(button)
                 get_data["l_x"] = (-predict_res["l_x_u"] + predict_res["l_x_d"]) * self.stick_bias
                 get_data["l_y"] = (-predict_res["l_y_u"] + predict_res["l_y_d"]) * self.stick_bias
-                get_data["r_x"] = (-predict_res["r_x_u"] + predict_res["r_x_d"])* self.stick_bias
+                get_data["r_x"] = (-predict_res["r_x_u"] + predict_res["r_x_d"]) * self.stick_bias
                 get_data["r_y"] = (-predict_res["r_y_u"] + predict_res["r_y_d"]) * self.stick_bias
                 serial_queue.put(get_data)
                 print(get_data)
