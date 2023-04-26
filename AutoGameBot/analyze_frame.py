@@ -29,10 +29,10 @@ class analyze_frame(object):
                 for button in glb.joystick_button_dict:
                     if predict_res[button] > self.button_threshold[button]:
                         get_data["press_button"].append(button)
-                get_data["l_x"] = (-predict_res["l_x_u"] + predict_res["l_x_d"]) 
+                get_data["l_x"] = (-predict_res["l_x_u"] + predict_res["l_x_d"]) * self.stick_bias
                 get_data["l_y"] = (-predict_res["l_y_u"] + predict_res["l_y_d"]) * self.stick_bias
-                get_data["r_x"] = (-predict_res["r_x_u"] *0.8 + predict_res["r_x_d"]) * 0.5
-                get_data["r_y"] = (-predict_res["r_y_u"] + predict_res["r_y_d"]) * 0.5
+                get_data["r_x"] = (-predict_res["r_x_u"] + predict_res["r_x_d"])* self.stick_bias
+                get_data["r_y"] = (-predict_res["r_y_u"] + predict_res["r_y_d"]) * self.stick_bias
                 serial_queue.put(get_data)
                 print(get_data)
                 while not frame_queue.qsize() == 0:
